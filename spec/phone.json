@@ -1,0 +1,709 @@
+{
+  "module": "phone",
+  "source": "Numbers are synthetic. carrier vectors follow data/phone-prefixes.json and docs/SPEC.md.",
+  "functions": {
+    "normalize": [
+      {
+        "name": "accepts_national_digits",
+        "args": [
+          "08031234567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_national_digits_grouped_by_spaces",
+        "args": [
+          "0803 123 4567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_national_digits_grouped_by_hyphens",
+        "args": [
+          "0803-123-4567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_national_digits_grouped_by_dots",
+        "args": [
+          "0803.123.4567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_a_bracketed_prefix",
+        "args": [
+          "(0803) 1234567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_international_with_plus_and_spaces",
+        "args": [
+          "+234 803 123 4567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_international_with_plus_and_no_spaces",
+        "args": [
+          "+2348031234567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_country_code_without_plus",
+        "args": [
+          "2348031234567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_country_code_with_hyphens",
+        "args": [
+          "234-803-123-4567"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "ignores_whitespace_around_the_input",
+        "args": [
+          "  0803 123 4567  "
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "accepts_a_seven_range_number",
+        "args": [
+          "07012345678"
+        ],
+        "returns": "+2347012345678"
+      },
+      {
+        "name": "accepts_a_nine_range_number",
+        "args": [
+          "09012345678"
+        ],
+        "returns": "+2349012345678"
+      },
+      {
+        "name": "accepts_an_eight_range_number_starting_81",
+        "args": [
+          "08123456789"
+        ],
+        "returns": "+2348123456789"
+      },
+      {
+        "name": "rejects_a_leading_digit_of_6",
+        "args": [
+          "0603 123 4567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_landline_style_number",
+        "args": [
+          "0123 456 7890"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_number_one_digit_short",
+        "args": [
+          "0803123456"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_number_one_digit_long",
+        "args": [
+          "080312345678"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_234_plus_11_digits",
+        "args": [
+          "+23480312345678"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_zero_after_234",
+        "args": [
+          "+2340803 1234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_ten_digits_with_no_prefix",
+        "args": [
+          "8031234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_double_zero_international_prefix",
+        "args": [
+          "002348031234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_another_country_code",
+        "args": [
+          "+1 803 123 4567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_doubled_plus",
+        "args": [
+          "++2348031234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_plus_inside_the_number",
+        "args": [
+          "0803+1234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_letter_among_the_digits",
+        "args": [
+          "0803 123 456a"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_trailing_text",
+        "args": [
+          "0803 123 4567 ext 1"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_bracketed_zero_after_234",
+        "args": [
+          "+234(0)803 123 4567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_whitespace_only",
+        "args": [
+          "   "
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_text",
+        "args": [
+          "abc"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_non_breaking_space_separator",
+        "args": [
+          "0803 123 4567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_slash_separator",
+        "args": [
+          "0803/123/4567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          8031234567
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_boolean",
+        "args": [
+          true
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_an_array",
+        "args": [
+          [
+            "08031234567"
+          ]
+        ],
+        "throws": "TypeError"
+      }
+    ],
+    "isValid": [
+      {
+        "name": "is_valid_for_national_digits",
+        "args": [
+          "08031234567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_space_grouping",
+        "args": [
+          "0803 123 4567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_hyphen_grouping",
+        "args": [
+          "0803-123-4567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_dot_grouping",
+        "args": [
+          "0803.123.4567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_a_bracketed_prefix",
+        "args": [
+          "(0803) 1234567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_plus_234_spaced",
+        "args": [
+          "+234 803 123 4567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_plus_234_unspaced",
+        "args": [
+          "+2348031234567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_country_code_without_plus",
+        "args": [
+          "2348031234567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_valid_for_country_code_with_hyphens",
+        "args": [
+          "234-803-123-4567"
+        ],
+        "returns": true
+      },
+      {
+        "name": "ignores_whitespace_around_the_input",
+        "args": [
+          "  0803 123 4567  "
+        ],
+        "returns": true
+      },
+      {
+        "name": "is_invalid_for_a_leading_digit_of_6",
+        "args": [
+          "0603 123 4567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_landline_style_number",
+        "args": [
+          "0123 456 7890"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_number_one_digit_short",
+        "args": [
+          "0803123456"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_number_one_digit_long",
+        "args": [
+          "080312345678"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_234_plus_11_digits",
+        "args": [
+          "+23480312345678"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_zero_after_234",
+        "args": [
+          "+2340803 1234567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_ten_digits_with_no_prefix",
+        "args": [
+          "8031234567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_00_prefix",
+        "args": [
+          "002348031234567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_another_country_code",
+        "args": [
+          "+1 803 123 4567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_doubled_plus",
+        "args": [
+          "++2348031234567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_plus_inside_the_number",
+        "args": [
+          "0803+1234567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_letter_among_the_digits",
+        "args": [
+          "0803 123 456a"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_trailing_text",
+        "args": [
+          "0803 123 4567 ext 1"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_bracketed_zero_after_234",
+        "args": [
+          "+234(0)803 123 4567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_whitespace_only",
+        "args": [
+          "   "
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_text",
+        "args": [
+          "abc"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_non_breaking_space_separator",
+        "args": [
+          "0803 123 4567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "is_invalid_for_a_slash_separator",
+        "args": [
+          "0803/123/4567"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          8031234567
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_boolean",
+        "args": [
+          true
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_an_array",
+        "args": [
+          [
+            "08031234567"
+          ]
+        ],
+        "throws": "TypeError"
+      }
+    ],
+    "format": [
+      {
+        "name": "formats_e164",
+        "args": [
+          "08031234567",
+          "e164"
+        ],
+        "returns": "+2348031234567"
+      },
+      {
+        "name": "formats_national_as_4_3_4",
+        "args": [
+          "+2348031234567",
+          "national"
+        ],
+        "returns": "0803 123 4567"
+      },
+      {
+        "name": "formats_international_as_3_3_4",
+        "args": [
+          "0803-123-4567",
+          "international"
+        ],
+        "returns": "+234 803 123 4567"
+      },
+      {
+        "name": "formats_a_seven_range_number_nationally",
+        "args": [
+          "2347012345678",
+          "national"
+        ],
+        "returns": "0701 234 5678"
+      },
+      {
+        "name": "returns_null_for_an_invalid_number",
+        "args": [
+          "0603 123 4567",
+          "national"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_an_empty_input",
+        "args": [
+          "",
+          "e164"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_an_unknown_style",
+        "args": [
+          "08031234567",
+          "weird"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_style_in_the_wrong_case",
+        "args": [
+          "08031234567",
+          "E164"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_non_string_style",
+        "args": [
+          "08031234567",
+          5
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_missing_style",
+        "args": [
+          "08031234567"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "checks_the_style_before_the_input",
+        "args": [
+          "abc",
+          "weird"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_non_string_input",
+        "args": [
+          8031234567,
+          "e164"
+        ],
+        "throws": "TypeError"
+      }
+    ],
+    "carrier": [
+      {
+        "name": "names_mtn_for_0803",
+        "args": [
+          "0803 123 4567"
+        ],
+        "returns": "MTN"
+      },
+      {
+        "name": "names_mtn_for_an_international_number",
+        "args": [
+          "+234 803 123 4567"
+        ],
+        "returns": "MTN"
+      },
+      {
+        "name": "names_airtel_for_0701",
+        "args": [
+          "07011234567"
+        ],
+        "returns": "AIRTEL"
+      },
+      {
+        "name": "names_airtel_for_0911",
+        "args": [
+          "09111234567"
+        ],
+        "returns": "AIRTEL"
+      },
+      {
+        "name": "names_glo_for_0805",
+        "args": [
+          "08051234567"
+        ],
+        "returns": "GLO"
+      },
+      {
+        "name": "names_9mobile_with_the_ncc_label",
+        "args": [
+          "08091234567"
+        ],
+        "returns": "EMTS (9Mobile)"
+      },
+      {
+        "name": "names_mtn_for_0704",
+        "args": [
+          "07041234567"
+        ],
+        "returns": "MTN"
+      },
+      {
+        "name": "names_mtn_for_0707",
+        "args": [
+          "07071234567"
+        ],
+        "returns": "MTN"
+      },
+      {
+        "name": "names_natcom_for_0804",
+        "args": [
+          "08041234567"
+        ],
+        "returns": "NATCOM (nTel)"
+      },
+      {
+        "name": "returns_null_for_a_split_prefix_0702",
+        "args": [
+          "07021234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_partly_allocated_0801",
+        "args": [
+          "08011234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_shared_range_0800",
+        "args": [
+          "08001234567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_an_invalid_number",
+        "args": [
+          "0603 123 4567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          8031234567
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ]
+  },
+  "values": {}
+}

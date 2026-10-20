@@ -1,0 +1,697 @@
+{
+  "module": "naira",
+  "source": "Behaviour defined in docs/SPEC.md. An integer written {\"$int\": \"digits\"} is arbitrary precision.",
+  "functions": {
+    "format": [
+      {
+        "name": "formats_zero",
+        "args": [
+          0
+        ],
+        "returns": "₦0.00"
+      },
+      {
+        "name": "pads_five_kobo",
+        "args": [
+          5
+        ],
+        "returns": "₦0.05"
+      },
+      {
+        "name": "formats_one_naira",
+        "args": [
+          100
+        ],
+        "returns": "₦1.00"
+      },
+      {
+        "name": "groups_thousands_and_keeps_kobo",
+        "args": [
+          123450
+        ],
+        "returns": "₦1,234.50"
+      },
+      {
+        "name": "groups_millions",
+        "args": [
+          100000000
+        ],
+        "returns": "₦1,000,000.00"
+      },
+      {
+        "name": "does_not_group_below_a_thousand",
+        "args": [
+          99999
+        ],
+        "returns": "₦999.99"
+      },
+      {
+        "name": "formats_a_negative_amount",
+        "args": [
+          -123450
+        ],
+        "returns": "-₦1,234.50"
+      },
+      {
+        "name": "formats_negative_kobo_only",
+        "args": [
+          -5
+        ],
+        "returns": "-₦0.05"
+      },
+      {
+        "name": "accepts_a_digit_string",
+        "args": [
+          "123450"
+        ],
+        "returns": "₦1,234.50"
+      },
+      {
+        "name": "accepts_a_negative_digit_string",
+        "args": [
+          "-123450"
+        ],
+        "returns": "-₦1,234.50"
+      },
+      {
+        "name": "accepts_a_bigint_above_the_safe_integer_range",
+        "args": [
+          {
+            "$int": "99999999999999999"
+          }
+        ],
+        "returns": "₦999,999,999,999,999.99"
+      },
+      {
+        "name": "renders_the_ngn_code_with_a_space",
+        "args": [
+          123450,
+          {
+            "symbol": "NGN"
+          }
+        ],
+        "returns": "NGN 1,234.50"
+      },
+      {
+        "name": "renders_a_negative_with_the_ngn_code",
+        "args": [
+          -123450,
+          {
+            "symbol": "NGN"
+          }
+        ],
+        "returns": "-NGN 1,234.50"
+      },
+      {
+        "name": "renders_no_symbol",
+        "args": [
+          123450,
+          {
+            "symbol": ""
+          }
+        ],
+        "returns": "1,234.50"
+      },
+      {
+        "name": "renders_a_negative_with_no_symbol",
+        "args": [
+          -123450,
+          {
+            "symbol": ""
+          }
+        ],
+        "returns": "-1,234.50"
+      },
+      {
+        "name": "renders_the_naira_sign_when_named",
+        "args": [
+          123450,
+          {
+            "symbol": "₦"
+          }
+        ],
+        "returns": "₦1,234.50"
+      },
+      {
+        "name": "drops_zero_kobo_when_decimals_is_0",
+        "args": [
+          123400,
+          {
+            "decimals": 0
+          }
+        ],
+        "returns": "₦1,234"
+      },
+      {
+        "name": "keeps_two_decimals_when_asked",
+        "args": [
+          123400,
+          {
+            "decimals": 2
+          }
+        ],
+        "returns": "₦1,234.00"
+      },
+      {
+        "name": "does_not_round_when_decimals_is_zero",
+        "args": [
+          123450,
+          {
+            "decimals": 0
+          }
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_three_decimals",
+        "args": [
+          123450,
+          {
+            "decimals": 3
+          }
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_an_unknown_symbol",
+        "args": [
+          123450,
+          {
+            "symbol": "$"
+          }
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_float",
+        "args": [
+          1234.5
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_string_with_a_decimal_point",
+        "args": [
+          "1234.50"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_string_with_separators",
+        "args": [
+          "123,450"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_an_exponent_string",
+        "args": [
+          "1e3"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_the_empty_string",
+        "args": [
+          ""
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_boolean",
+        "args": [
+          true
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ],
+    "parse": [
+      {
+        "name": "parses_the_naira_sign_with_grouping_and_kobo",
+        "args": [
+          "₦1,234.50"
+        ],
+        "returns": 123450
+      },
+      {
+        "name": "parses_ngn_with_a_space_and_one_decimal",
+        "args": [
+          "NGN 1234.5"
+        ],
+        "returns": 123450
+      },
+      {
+        "name": "parses_grouped_whole_naira",
+        "args": [
+          "1,234"
+        ],
+        "returns": 123400
+      },
+      {
+        "name": "parses_ngn_with_no_space",
+        "args": [
+          "NGN1,234.50"
+        ],
+        "returns": 123450
+      },
+      {
+        "name": "parses_spaces_after_the_symbol_and_around",
+        "args": [
+          "  ₦ 1,234.50  "
+        ],
+        "returns": 123450
+      },
+      {
+        "name": "parses_ungrouped_digits_with_kobo",
+        "args": [
+          "1234.50"
+        ],
+        "returns": 123450
+      },
+      {
+        "name": "parses_ungrouped_whole_naira",
+        "args": [
+          "1234"
+        ],
+        "returns": 123400
+      },
+      {
+        "name": "parses_a_leading_minus",
+        "args": [
+          "-₦1,234.50"
+        ],
+        "returns": -123450
+      },
+      {
+        "name": "parses_a_leading_minus_without_a_symbol",
+        "args": [
+          "-1,234"
+        ],
+        "returns": -123400
+      },
+      {
+        "name": "parses_five_kobo",
+        "args": [
+          "₦0.05"
+        ],
+        "returns": 5
+      },
+      {
+        "name": "parses_zero",
+        "args": [
+          "₦0"
+        ],
+        "returns": 0
+      },
+      {
+        "name": "parses_to_a_bigint_above_safe_range",
+        "args": [
+          "₦999,999,999,999,999.99"
+        ],
+        "returns": {
+          "$int": "99999999999999999"
+        }
+      },
+      {
+        "name": "rejects_misplaced_grouping",
+        "args": [
+          "12,34"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_group_of_four_digits",
+        "args": [
+          "1,2345"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_grouping_after_an_ungrouped_run",
+        "args": [
+          "1234,567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_three_decimals_rather_than_rounding",
+        "args": [
+          "₦1,234.567"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_trailing_point",
+        "args": [
+          "1234."
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_leading_point",
+        "args": [
+          ".50"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_second_point",
+        "args": [
+          "1,234.5.0"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_whitespace_only",
+        "args": [
+          "   "
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_text",
+        "args": [
+          "abc"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_symbol_with_no_digits",
+        "args": [
+          "₦"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_code_with_no_digits",
+        "args": [
+          "NGN"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_an_exponent",
+        "args": [
+          "1e3"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_the_dollar_sign",
+        "args": [
+          "$1,234.50"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_an_ascii_n_as_the_symbol",
+        "args": [
+          "N1,234"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_doubled_symbol",
+        "args": [
+          "₦₦100"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_lowercase_code",
+        "args": [
+          "ngn 100"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_space_as_a_grouping_mark",
+        "args": [
+          "₦1 234"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_minus_after_the_symbol",
+        "args": [
+          "₦-100"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_doubled_minus",
+        "args": [
+          "--100"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_plus_sign",
+        "args": [
+          "+100"
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          1234
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ],
+    "toWords": [
+      {
+        "name": "says_zero_naira_for_zero",
+        "args": [
+          0
+        ],
+        "returns": "Zero naira"
+      },
+      {
+        "name": "says_one_kobo",
+        "args": [
+          1
+        ],
+        "returns": "One kobo"
+      },
+      {
+        "name": "says_five_kobo",
+        "args": [
+          5
+        ],
+        "returns": "Five kobo"
+      },
+      {
+        "name": "hyphenates_ninety_nine_kobo",
+        "args": [
+          99
+        ],
+        "returns": "Ninety-nine kobo"
+      },
+      {
+        "name": "says_one_naira",
+        "args": [
+          100
+        ],
+        "returns": "One naira"
+      },
+      {
+        "name": "joins_naira_and_kobo_with_a_comma",
+        "args": [
+          101
+        ],
+        "returns": "One naira, one kobo"
+      },
+      {
+        "name": "says_one_naira_fifty_kobo",
+        "args": [
+          150
+        ],
+        "returns": "One naira, fifty kobo"
+      },
+      {
+        "name": "says_thirteen_naira",
+        "args": [
+          1300
+        ],
+        "returns": "Thirteen naira"
+      },
+      {
+        "name": "says_ten_naira",
+        "args": [
+          1000
+        ],
+        "returns": "Ten naira"
+      },
+      {
+        "name": "hyphenates_twenty_one_naira",
+        "args": [
+          2100
+        ],
+        "returns": "Twenty-one naira"
+      },
+      {
+        "name": "says_one_hundred_naira_without_and",
+        "args": [
+          10000
+        ],
+        "returns": "One hundred naira"
+      },
+      {
+        "name": "puts_and_after_hundred_when_units_follow",
+        "args": [
+          10100
+        ],
+        "returns": "One hundred and one naira"
+      },
+      {
+        "name": "says_the_spec_example",
+        "args": [
+          123450
+        ],
+        "returns": "One thousand, two hundred and thirty-four naira, fifty kobo"
+      },
+      {
+        "name": "says_one_thousand_naira",
+        "args": [
+          100000
+        ],
+        "returns": "One thousand naira"
+      },
+      {
+        "name": "joins_a_final_group_below_a_hundred_with_and",
+        "args": [
+          100500
+        ],
+        "returns": "One thousand and five naira"
+      },
+      {
+        "name": "joins_a_final_hundreds_group_with_a_comma",
+        "args": [
+          1010000
+        ],
+        "returns": "Ten thousand, one hundred naira"
+      },
+      {
+        "name": "joins_tens_after_thousands_with_and",
+        "args": [
+          20005000
+        ],
+        "returns": "Two hundred thousand and fifty naira"
+      },
+      {
+        "name": "says_one_million_naira",
+        "args": [
+          100000000
+        ],
+        "returns": "One million naira"
+      },
+      {
+        "name": "joins_one_after_a_million_with_and",
+        "args": [
+          100000100
+        ],
+        "returns": "One million and one naira"
+      },
+      {
+        "name": "omits_a_zero_thousands_group",
+        "args": [
+          250000075
+        ],
+        "returns": "Two million, five hundred thousand naira, seventy-five kobo"
+      },
+      {
+        "name": "says_one_billion_naira",
+        "args": [
+          100000000000
+        ],
+        "returns": "One billion naira"
+      },
+      {
+        "name": "says_one_trillion_naira",
+        "args": [
+          100000000000000
+        ],
+        "returns": "One trillion naira"
+      },
+      {
+        "name": "says_the_largest_supported_amount",
+        "args": [
+          {
+            "$int": "99999999999999999"
+          }
+        ],
+        "returns": "Nine hundred and ninety-nine trillion, nine hundred and ninety-nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine naira, ninety-nine kobo"
+      },
+      {
+        "name": "prefixes_minus_for_a_negative_amount",
+        "args": [
+          -123450
+        ],
+        "returns": "Minus one thousand, two hundred and thirty-four naira, fifty kobo"
+      },
+      {
+        "name": "accepts_a_digit_string",
+        "args": [
+          "123450"
+        ],
+        "returns": "One thousand, two hundred and thirty-four naira, fifty kobo"
+      },
+      {
+        "name": "rejects_ten_to_the_fifteenth_naira",
+        "args": [
+          {
+            "$int": "100000000000000000"
+          }
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_float",
+        "args": [
+          1234.5
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_string_with_a_decimal_point",
+        "args": [
+          "12.5"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ]
+  },
+  "values": {
+    "NAIRA_SIGN": "₦"
+  }
+}

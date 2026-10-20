@@ -1,0 +1,361 @@
+{
+  "source": "Paystack, List Banks API (GET https://api.paystack.co/bank?country=nigeria). Secondary source: not published by the CBN or NIBSS.",
+  "retrievedAt": "2026-10-17",
+  "excluded": [
+    {
+      "code": "000304",
+      "name": "Alternative bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "00103",
+      "name": "Globus Bank",
+      "reason": "5-digit code starting 00 looks like a zero-padded 3-digit code; the CBN standard defines 3-digit bank codes and 5-digit OFI codes separately, so the correct code is unknown"
+    },
+    {
+      "code": "00109",
+      "name": "Tatum Bank Ltd",
+      "reason": "5-digit code starting 00 looks like a zero-padded 3-digit code; the CBN standard defines 3-digit bank codes and 5-digit OFI codes separately, so the correct code is unknown"
+    },
+    {
+      "code": "00305",
+      "name": "Summit Bank",
+      "reason": "5-digit code starting 00 looks like a zero-padded 3-digit code; the CBN standard defines 3-digit bank codes and 5-digit OFI codes separately, so the correct code is unknown"
+    },
+    {
+      "code": "00716",
+      "name": "Pocket App",
+      "reason": "5-digit code starting 00 looks like a zero-padded 3-digit code; the CBN standard defines 3-digit bank codes and 5-digit OFI codes separately, so the correct code is unknown"
+    },
+    {
+      "code": "00zap",
+      "name": "Zap",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "035A",
+      "name": "ALAT by WEMA",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "050002",
+      "name": "Fewchore Finance Company Limited",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "050020",
+      "name": "Vale Finance Limited",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "050021",
+      "name": "PFI FINANCE COMPANY LIMITED",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "050023",
+      "name": "PROSPERIS FINANCE LIMITED",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "050032",
+      "name": "Centrum Finance",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "057",
+      "name": "Zenith Bank",
+      "reason": "exact duplicate of another record with the same code and name"
+    },
+    {
+      "code": "070016",
+      "name": "Infinity trust Mortgage Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "070022",
+      "name": "STB Mortgage Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "070027",
+      "name": "CITYCODE MORTAGE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "09",
+      "name": "MINT-FINEX MFB",
+      "reason": "code is 2-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090162",
+      "name": "STANFORD MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090164",
+      "name": "FIRST ROYAL MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090171",
+      "name": "MAINSTREET MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090190",
+      "name": "MUTUAL BENEFITS MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090420",
+      "name": "Letshego Microfinance Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090478",
+      "name": "AVUENEGBE MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090496",
+      "name": "RANDALPHA MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090560",
+      "name": "Crust Microfinance Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090561",
+      "name": "Akuchukwu Microfinance Bank Limited",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090567",
+      "name": "Flutterwave MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090574",
+      "name": "Goldman MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090629",
+      "name": "9jaPay Microfinance Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090664",
+      "name": "GOOD SHEPHERD MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090678",
+      "name": "EXCEL FINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090679",
+      "name": "NDCC MICROFINANCE BANK",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090680",
+      "name": "PATHFINDER MICROFINANCE BANK LIMITED",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090701",
+      "name": "ISUA MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090706",
+      "name": "UCEE MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090708",
+      "name": "TransPay MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "090759",
+      "name": "Advancly MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "091003",
+      "name": "Lemmy MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100002",
+      "name": "Paga",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100022",
+      "name": "GoMoney",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100023",
+      "name": "Visual ICT Limited (TagPay)",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100025",
+      "name": "Kolomoni Microfinance Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100025",
+      "name": "KONGAPAY (Kongapay Technologies Limited)(formerly Zinternet)",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100036",
+      "name": "CHAMS MOBILE MFB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100039",
+      "name": "Paystack-Titan",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "100040",
+      "name": "Xpress Wallet",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "120001",
+      "name": "9mobile 9Payment Service Bank",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "120002",
+      "name": "HopePSB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "120003",
+      "name": "MTN Momo PSB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "120004",
+      "name": "Airtel Smartcash PSB",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "402001",
+      "name": "Whitecrust Finance Company",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "50572",
+      "name": "BANKIT MFB",
+      "reason": "code is shared with a differently named institution: BANKIT MICROFINANCE BANK LTD"
+    },
+    {
+      "code": "50572",
+      "name": "BANKIT MICROFINANCE BANK LTD",
+      "reason": "code is shared with a differently named institution: BANKIT MFB"
+    },
+    {
+      "code": "50739",
+      "name": "Goodnews Microfinance Bank",
+      "reason": "code is shared with a differently named institution: Prospa Capital Microfinance Bank"
+    },
+    {
+      "code": "50739",
+      "name": "Prospa Capital Microfinance Bank",
+      "reason": "code is shared with a differently named institution: Goodnews Microfinance Bank"
+    },
+    {
+      "code": "50840",
+      "name": "U and C MFB",
+      "reason": "code is shared with a differently named institution: U&C Microfinance Bank Ltd (U AND C MFB)"
+    },
+    {
+      "code": "50840",
+      "name": "U&C Microfinance Bank Ltd (U AND C MFB)",
+      "reason": "code is shared with a differently named institution: U and C MFB"
+    },
+    {
+      "code": "51253",
+      "name": "Stellas MFB",
+      "reason": "code is shared with a differently named institution: YCT MFB"
+    },
+    {
+      "code": "51253",
+      "name": "YCT MFB",
+      "reason": "code is shared with a differently named institution: Stellas MFB"
+    },
+    {
+      "code": "5129",
+      "name": "Kayvee Microfinance Bank",
+      "reason": "code is 4-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "999991",
+      "name": "PalmPay",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "999992",
+      "name": "OPay Digital Services Limited (OPay)",
+      "reason": "code is 6-digit; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "C08",
+      "name": "VTNetworks",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "D53",
+      "name": "Fortress MFB",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "FC40128",
+      "name": "County Finance Limited",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "FC40163",
+      "name": "Branch International Finance Company Limited",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "MFB50094",
+      "name": "Astrapolaris MFB LTD",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "MFB50992",
+      "name": "Baobab Microfinance Bank",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "MFB51093",
+      "name": "Garun Mallam MFB",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "MFB51116M",
+      "name": "Michael Okpara UniAgric Microfinance Bank",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    },
+    {
+      "code": "MFB51452",
+      "name": "Pettysave MFB",
+      "reason": "code is alphanumeric; the CBN standard defines only 3-digit and 5-digit codes"
+    }
+  ]
+}

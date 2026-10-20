@@ -1,0 +1,193 @@
+{
+  "module": "banks",
+  "source": "Entries are the ones the CBN 2010 table also lists (011, 044, 057, 058, 063); other entries are not pinned because data/banks.json is provisional.",
+  "functions": {
+    "getBank": [
+      {
+        "name": "finds_a_bank_by_its_code",
+        "args": [
+          "044"
+        ],
+        "returns": {
+          "code": "044"
+        }
+      },
+      {
+        "name": "finds_first_bank_by_its_code",
+        "args": [
+          "011"
+        ],
+        "returns": {
+          "code": "011"
+        }
+      },
+      {
+        "name": "finds_guaranty_trust_by_its_code",
+        "args": [
+          "058"
+        ],
+        "returns": {
+          "code": "058"
+        }
+      },
+      {
+        "name": "returns_null_for_an_unlisted_code",
+        "args": [
+          "999"
+        ],
+        "returns": null
+      },
+      {
+        "name": "does_not_pad_a_short_code",
+        "args": [
+          "44"
+        ],
+        "returns": null
+      },
+      {
+        "name": "does_not_trim_whitespace",
+        "args": [
+          " 044"
+        ],
+        "returns": null
+      },
+      {
+        "name": "does_not_strip_leading_zeros",
+        "args": [
+          "0044"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          44
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ],
+    "findBank": [
+      {
+        "name": "finds_a_bank_by_part_of_its_name",
+        "args": [
+          "zenith"
+        ],
+        "contains": [
+          "057"
+        ]
+      },
+      {
+        "name": "ignores_case",
+        "args": [
+          "ZENITH BANK"
+        ],
+        "contains": [
+          "057"
+        ]
+      },
+      {
+        "name": "ignores_punctuation_between_words",
+        "args": [
+          "zenith-bank"
+        ],
+        "contains": [
+          "057"
+        ]
+      },
+      {
+        "name": "ignores_spacing",
+        "args": [
+          "  first   bank "
+        ],
+        "contains": [
+          "011"
+        ]
+      },
+      {
+        "name": "matches_a_name_that_continues_after_the_query",
+        "args": [
+          "guaranty trust"
+        ],
+        "contains": [
+          "058"
+        ]
+      },
+      {
+        "name": "matches_inside_a_name_not_only_at_the_start",
+        "args": [
+          "trust bank"
+        ],
+        "contains": [
+          "058"
+        ]
+      },
+      {
+        "name": "returns_every_name_that_contains_the_query",
+        "args": [
+          "access"
+        ],
+        "contains": [
+          "044",
+          "063"
+        ]
+      },
+      {
+        "name": "returns_an_empty_array_when_nothing_matches",
+        "args": [
+          "no such institution qqzx"
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_whitespace",
+        "args": [
+          "   "
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_punctuation_only",
+        "args": [
+          "---"
+        ],
+        "returns": []
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          44
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ]
+  },
+  "values": {}
+}

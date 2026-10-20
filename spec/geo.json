@@ -1,0 +1,438 @@
+{
+  "module": "geo",
+  "source": "States and zones from data/states.json.",
+  "functions": {
+    "getState": [
+      {
+        "name": "resolves_a_name",
+        "args": [
+          "Lagos"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "resolves_a_name_in_lower_case",
+        "args": [
+          "lagos"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "resolves_a_name_in_upper_case",
+        "args": [
+          "LAGOS"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "resolves_an_iso_code",
+        "args": [
+          "NG-LA"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "resolves_an_iso_code_in_lower_case",
+        "args": [
+          "ng-la"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "ignores_surrounding_whitespace",
+        "args": [
+          "  Lagos  "
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "resolves_a_two_word_name",
+        "args": [
+          "Akwa Ibom"
+        ],
+        "returns": {
+          "iso": "NG-AK"
+        }
+      },
+      {
+        "name": "collapses_repeated_whitespace",
+        "args": [
+          "akwa   ibom"
+        ],
+        "returns": {
+          "iso": "NG-AK"
+        }
+      },
+      {
+        "name": "resolves_cross_river",
+        "args": [
+          "Cross River"
+        ],
+        "returns": {
+          "iso": "NG-CR"
+        }
+      },
+      {
+        "name": "resolves_fct_as_an_alias",
+        "args": [
+          "FCT"
+        ],
+        "returns": {
+          "iso": "NG-FC"
+        }
+      },
+      {
+        "name": "resolves_fct_in_lower_case",
+        "args": [
+          "fct"
+        ],
+        "returns": {
+          "iso": "NG-FC"
+        }
+      },
+      {
+        "name": "resolves_abuja_to_the_fct",
+        "args": [
+          "Abuja"
+        ],
+        "returns": {
+          "iso": "NG-FC"
+        }
+      },
+      {
+        "name": "resolves_the_full_fct_name",
+        "args": [
+          "Federal Capital Territory"
+        ],
+        "returns": {
+          "iso": "NG-FC"
+        }
+      },
+      {
+        "name": "resolves_the_fct_iso_code",
+        "args": [
+          "NG-FC"
+        ],
+        "returns": {
+          "iso": "NG-FC"
+        }
+      },
+      {
+        "name": "returns_null_for_another_capital",
+        "args": [
+          "Ikeja"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_a_bare_two_letter_code",
+        "args": [
+          "LA"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_a_misspelling",
+        "args": [
+          "Nassarawa"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_an_unassigned_iso_code",
+        "args": [
+          "NG-XX"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_a_combined_alias",
+        "args": [
+          "Abuja FCT"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_whitespace_only",
+        "args": [
+          "   "
+        ],
+        "returns": null
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          5
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "accepts_a_state_suffix",
+        "args": [
+          "Lagos State"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "accepts_a_state_suffix_in_lower_case",
+        "args": [
+          "lagos state"
+        ],
+        "returns": {
+          "iso": "NG-LA"
+        }
+      },
+      {
+        "name": "accepts_a_state_suffix_after_a_two_word_name",
+        "args": [
+          "Cross River State"
+        ],
+        "returns": {
+          "iso": "NG-CR"
+        }
+      },
+      {
+        "name": "accepts_a_hyphen_for_a_space",
+        "args": [
+          "Akwa-Ibom"
+        ],
+        "returns": {
+          "iso": "NG-AK"
+        }
+      },
+      {
+        "name": "accepts_hyphens_with_the_suffix",
+        "args": [
+          "cross-river-state"
+        ],
+        "returns": {
+          "iso": "NG-CR"
+        }
+      },
+      {
+        "name": "returns_null_for_the_suffix_alone",
+        "args": [
+          "State"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_a_doubled_suffix",
+        "args": [
+          "Lagos State State"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_the_suffix_after_fct",
+        "args": [
+          "FCT State"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_the_suffix_after_abuja",
+        "args": [
+          "Abuja State"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_suffix_after_full_fct_name",
+        "args": [
+          "Federal Capital Territory State"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_the_suffix_after_an_iso_code",
+        "args": [
+          "NG-LA State"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_an_iso_code_with_a_space",
+        "args": [
+          "NG LA"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_a_trailing_hyphen",
+        "args": [
+          "Lagos-"
+        ],
+        "returns": null
+      },
+      {
+        "name": "returns_null_for_a_leading_hyphen",
+        "args": [
+          "-Lagos"
+        ],
+        "returns": null
+      }
+    ],
+    "statesInZone": [
+      {
+        "name": "lists_north_central_with_the_fct",
+        "args": [
+          "North Central"
+        ],
+        "returns": [
+          "Benue",
+          "Federal Capital Territory",
+          "Kogi",
+          "Kwara",
+          "Nasarawa",
+          "Niger",
+          "Plateau"
+        ]
+      },
+      {
+        "name": "lists_north_east",
+        "args": [
+          "North East"
+        ],
+        "returns": [
+          "Adamawa",
+          "Bauchi",
+          "Borno",
+          "Gombe",
+          "Taraba",
+          "Yobe"
+        ]
+      },
+      {
+        "name": "lists_north_west",
+        "args": [
+          "North West"
+        ],
+        "returns": [
+          "Jigawa",
+          "Kaduna",
+          "Kano",
+          "Katsina",
+          "Kebbi",
+          "Sokoto",
+          "Zamfara"
+        ]
+      },
+      {
+        "name": "lists_south_east",
+        "args": [
+          "South East"
+        ],
+        "returns": [
+          "Abia",
+          "Anambra",
+          "Ebonyi",
+          "Enugu",
+          "Imo"
+        ]
+      },
+      {
+        "name": "lists_south_south",
+        "args": [
+          "South South"
+        ],
+        "returns": [
+          "Akwa Ibom",
+          "Bayelsa",
+          "Cross River",
+          "Delta",
+          "Edo",
+          "Rivers"
+        ]
+      },
+      {
+        "name": "lists_south_west",
+        "args": [
+          "South West"
+        ],
+        "returns": [
+          "Ekiti",
+          "Lagos",
+          "Ogun",
+          "Ondo",
+          "Osun",
+          "Oyo"
+        ]
+      },
+      {
+        "name": "matches_the_zone_ignoring_case",
+        "args": [
+          "south west"
+        ],
+        "returns": [
+          "Ekiti",
+          "Lagos",
+          "Ogun",
+          "Ondo",
+          "Osun",
+          "Oyo"
+        ]
+      },
+      {
+        "name": "returns_an_empty_array_for_an_unknown_zone",
+        "args": [
+          "Midwest"
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": []
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ]
+  },
+  "values": {
+    "zones": [
+      "North Central",
+      "North East",
+      "North West",
+      "South East",
+      "South South",
+      "South West"
+    ],
+    "stateCount": 37
+  }
+}

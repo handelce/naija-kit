@@ -1,0 +1,228 @@
+{
+  "source": "State names: Constitution of the Federal Republic of Nigeria 1999 (rev. 2011), section 3 and First Schedule Part I. Codes: ISO 3166-2:NG. Capitals: First Schedule Part I, in current spelling. Zones: conventional geopolitical zones, cross-checked against Wikipedia, which is a secondary source.",
+  "verifiedAt": "2026-10-18",
+  "states": [
+    {
+      "name": "Abia",
+      "capital": "Umuahia",
+      "iso": "NG-AB",
+      "zone": "South East"
+    },
+    {
+      "name": "Adamawa",
+      "capital": "Yola",
+      "iso": "NG-AD",
+      "zone": "North East"
+    },
+    {
+      "name": "Akwa Ibom",
+      "capital": "Uyo",
+      "iso": "NG-AK",
+      "zone": "South South"
+    },
+    {
+      "name": "Anambra",
+      "capital": "Awka",
+      "iso": "NG-AN",
+      "zone": "South East"
+    },
+    {
+      "name": "Bauchi",
+      "capital": "Bauchi",
+      "iso": "NG-BA",
+      "zone": "North East"
+    },
+    {
+      "name": "Bayelsa",
+      "capital": "Yenagoa",
+      "iso": "NG-BY",
+      "zone": "South South"
+    },
+    {
+      "name": "Benue",
+      "capital": "Makurdi",
+      "iso": "NG-BE",
+      "zone": "North Central"
+    },
+    {
+      "name": "Borno",
+      "capital": "Maiduguri",
+      "iso": "NG-BO",
+      "zone": "North East"
+    },
+    {
+      "name": "Cross River",
+      "capital": "Calabar",
+      "iso": "NG-CR",
+      "zone": "South South"
+    },
+    {
+      "name": "Delta",
+      "capital": "Asaba",
+      "iso": "NG-DE",
+      "zone": "South South"
+    },
+    {
+      "name": "Ebonyi",
+      "capital": "Abakaliki",
+      "iso": "NG-EB",
+      "zone": "South East"
+    },
+    {
+      "name": "Edo",
+      "capital": "Benin City",
+      "iso": "NG-ED",
+      "zone": "South South"
+    },
+    {
+      "name": "Ekiti",
+      "capital": "Ado-Ekiti",
+      "iso": "NG-EK",
+      "zone": "South West"
+    },
+    {
+      "name": "Enugu",
+      "capital": "Enugu",
+      "iso": "NG-EN",
+      "zone": "South East"
+    },
+    {
+      "name": "Federal Capital Territory",
+      "capital": "Abuja",
+      "iso": "NG-FC",
+      "zone": "North Central"
+    },
+    {
+      "name": "Gombe",
+      "capital": "Gombe",
+      "iso": "NG-GO",
+      "zone": "North East"
+    },
+    {
+      "name": "Imo",
+      "capital": "Owerri",
+      "iso": "NG-IM",
+      "zone": "South East"
+    },
+    {
+      "name": "Jigawa",
+      "capital": "Dutse",
+      "iso": "NG-JI",
+      "zone": "North West"
+    },
+    {
+      "name": "Kaduna",
+      "capital": "Kaduna",
+      "iso": "NG-KD",
+      "zone": "North West"
+    },
+    {
+      "name": "Kano",
+      "capital": "Kano",
+      "iso": "NG-KN",
+      "zone": "North West"
+    },
+    {
+      "name": "Katsina",
+      "capital": "Katsina",
+      "iso": "NG-KT",
+      "zone": "North West"
+    },
+    {
+      "name": "Kebbi",
+      "capital": "Birnin Kebbi",
+      "iso": "NG-KE",
+      "zone": "North West"
+    },
+    {
+      "name": "Kogi",
+      "capital": "Lokoja",
+      "iso": "NG-KO",
+      "zone": "North Central"
+    },
+    {
+      "name": "Kwara",
+      "capital": "Ilorin",
+      "iso": "NG-KW",
+      "zone": "North Central"
+    },
+    {
+      "name": "Lagos",
+      "capital": "Ikeja",
+      "iso": "NG-LA",
+      "zone": "South West"
+    },
+    {
+      "name": "Nasarawa",
+      "capital": "Lafia",
+      "iso": "NG-NA",
+      "zone": "North Central"
+    },
+    {
+      "name": "Niger",
+      "capital": "Minna",
+      "iso": "NG-NI",
+      "zone": "North Central"
+    },
+    {
+      "name": "Ogun",
+      "capital": "Abeokuta",
+      "iso": "NG-OG",
+      "zone": "South West"
+    },
+    {
+      "name": "Ondo",
+      "capital": "Akure",
+      "iso": "NG-ON",
+      "zone": "South West"
+    },
+    {
+      "name": "Osun",
+      "capital": "Osogbo",
+      "iso": "NG-OS",
+      "zone": "South West"
+    },
+    {
+      "name": "Oyo",
+      "capital": "Ibadan",
+      "iso": "NG-OY",
+      "zone": "South West"
+    },
+    {
+      "name": "Plateau",
+      "capital": "Jos",
+      "iso": "NG-PL",
+      "zone": "North Central"
+    },
+    {
+      "name": "Rivers",
+      "capital": "Port Harcourt",
+      "iso": "NG-RI",
+      "zone": "South South"
+    },
+    {
+      "name": "Sokoto",
+      "capital": "Sokoto",
+      "iso": "NG-SO",
+      "zone": "North West"
+    },
+    {
+      "name": "Taraba",
+      "capital": "Jalingo",
+      "iso": "NG-TA",
+      "zone": "North East"
+    },
+    {
+      "name": "Yobe",
+      "capital": "Damaturu",
+      "iso": "NG-YO",
+      "zone": "North East"
+    },
+    {
+      "name": "Zamfara",
+      "capital": "Gusau",
+      "iso": "NG-ZA",
+      "zone": "North West"
+    }
+  ]
+}

@@ -1,0 +1,668 @@
+{
+  "module": "nuban",
+  "source": "CBN, Revised Standards on NUBAN for Banks and Other Financial Institutions (2020 circular) and Proposals on the Implementation of NUBAN Scheme v0.4; see data/SOURCES.md. Codes other than 011 and 50547 are synthetic: the algorithm does not depend on the code being assigned.",
+  "functions": {
+    "computeCheckDigit": [
+      {
+        "name": "matches_the_cbn_first_worked_example",
+        "args": [
+          "011",
+          "000001457"
+        ],
+        "returns": 9,
+        "note": "weighted sum 81"
+      },
+      {
+        "name": "matches_the_cbn_second_worked_example",
+        "args": [
+          "011",
+          "000000022"
+        ],
+        "returns": 0,
+        "note": "weighted sum 30, remainder 0 gives check digit 0"
+      },
+      {
+        "name": "returns_zero_for_an_all_zero_code_and_serial",
+        "args": [
+          "000",
+          "000000000"
+        ],
+        "returns": 0
+      },
+      {
+        "name": "weights_first_serial_digit_by_3",
+        "args": [
+          "123",
+          "100000000"
+        ],
+        "returns": 1
+      },
+      {
+        "name": "weights_second_serial_digit_by_7",
+        "args": [
+          "123",
+          "010000000"
+        ],
+        "returns": 7
+      },
+      {
+        "name": "weights_last_serial_digit_by_3",
+        "args": [
+          "123",
+          "000000001"
+        ],
+        "returns": 1
+      },
+      {
+        "name": "weights_eighth_serial_digit_by_7",
+        "args": [
+          "123",
+          "000000010"
+        ],
+        "returns": 7
+      },
+      {
+        "name": "accepts_the_highest_code_and_serial",
+        "args": [
+          "999",
+          "999999999"
+        ],
+        "returns": 2
+      },
+      {
+        "name": "returns_check_digit_3_for_code_321",
+        "args": [
+          "321",
+          "000015838"
+        ],
+        "returns": 3
+      },
+      {
+        "name": "returns_check_digit_4_for_code_321",
+        "args": [
+          "321",
+          "000023757"
+        ],
+        "returns": 4
+      },
+      {
+        "name": "returns_check_digit_5_for_code_321",
+        "args": [
+          "321",
+          "000031676"
+        ],
+        "returns": 5
+      },
+      {
+        "name": "returns_check_digit_8_for_code_321",
+        "args": [
+          "321",
+          "000095028"
+        ],
+        "returns": 8
+      },
+      {
+        "name": "returns_check_digit_6_for_code_321",
+        "args": [
+          "321",
+          "000126704"
+        ],
+        "returns": 6
+      },
+      {
+        "name": "rejects_a_two_digit_bank_code",
+        "args": [
+          "11",
+          "000001457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_four_digit_bank_code",
+        "args": [
+          "0111",
+          "000001457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_bank_code_with_a_letter",
+        "args": [
+          "01a",
+          "000001457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_an_empty_bank_code",
+        "args": [
+          "",
+          "000001457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_bank_code_with_a_space",
+        "args": [
+          "01 ",
+          "000001457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_serial_of_eight_digits",
+        "args": [
+          "011",
+          "00001457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_serial_of_ten_digits",
+        "args": [
+          "011",
+          "0000014579"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_serial_with_a_letter",
+        "args": [
+          "011",
+          "00000145x"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_serial_with_a_trailing_newline",
+        "args": [
+          "011",
+          "00000145\n"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_numeric_bank_code",
+        "args": [
+          11,
+          "000001457"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_numeric_serial",
+        "args": [
+          "011",
+          1457
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_null_serial",
+        "args": [
+          "011",
+          null
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "matches_the_cbn_ofi_worked_example",
+        "args": [
+          "50547",
+          "000021457"
+        ],
+        "returns": 9,
+        "note": "weighted sum 211 over 950547000021457"
+      },
+      {
+        "name": "computes_ofi_50547_000000001",
+        "args": [
+          "50547",
+          "000000001"
+        ],
+        "returns": 1
+      },
+      {
+        "name": "computes_ofi_50547_123456789",
+        "args": [
+          "50547",
+          "123456789"
+        ],
+        "returns": 9
+      },
+      {
+        "name": "computes_ofi_50547_000000000",
+        "args": [
+          "50547",
+          "000000000"
+        ],
+        "returns": 4
+      },
+      {
+        "name": "computes_ofi_12345_000000001",
+        "args": [
+          "12345",
+          "000000001"
+        ],
+        "returns": 5
+      },
+      {
+        "name": "computes_ofi_12345_123456789",
+        "args": [
+          "12345",
+          "123456789"
+        ],
+        "returns": 3
+      },
+      {
+        "name": "computes_ofi_12345_000000000",
+        "args": [
+          "12345",
+          "000000000"
+        ],
+        "returns": 8
+      },
+      {
+        "name": "computes_ofi_00000_000000001",
+        "args": [
+          "00000",
+          "000000001"
+        ],
+        "returns": 0
+      },
+      {
+        "name": "computes_ofi_00000_123456789",
+        "args": [
+          "00000",
+          "123456789"
+        ],
+        "returns": 8
+      },
+      {
+        "name": "computes_ofi_99999_000000001",
+        "args": [
+          "99999",
+          "000000001"
+        ],
+        "returns": 3
+      },
+      {
+        "name": "computes_ofi_99999_123456789",
+        "args": [
+          "99999",
+          "123456789"
+        ],
+        "returns": 1
+      },
+      {
+        "name": "computes_ofi_99999_000000000",
+        "args": [
+          "99999",
+          "000000000"
+        ],
+        "returns": 6
+      },
+      {
+        "name": "rejects_a_six_digit_code",
+        "args": [
+          "950547",
+          "000021457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_four_digit_code",
+        "args": [
+          "5054",
+          "000021457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_seven_digit_code",
+        "args": [
+          "9505470",
+          "000021457"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_five_character_code_with_a_letter",
+        "args": [
+          "5054a",
+          "000021457"
+        ],
+        "throws": "RangeError"
+      }
+    ],
+    "isValidNuban": [
+      {
+        "name": "accepts_the_cbn_first_worked_example",
+        "args": [
+          "0000014579",
+          "011"
+        ],
+        "returns": true
+      },
+      {
+        "name": "accepts_the_cbn_second_worked_example",
+        "args": [
+          "0000000220",
+          "011"
+        ],
+        "returns": true
+      },
+      {
+        "name": "rejects_a_mismatched_check_digit",
+        "args": [
+          "0000014578",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_0_where_9_is_correct",
+        "args": [
+          "0000014570",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_1_where_9_is_correct",
+        "args": [
+          "0000014571",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_2_where_9_is_correct",
+        "args": [
+          "0000014572",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_3_where_9_is_correct",
+        "args": [
+          "0000014573",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_4_where_9_is_correct",
+        "args": [
+          "0000014574",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_5_where_9_is_correct",
+        "args": [
+          "0000014575",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_6_where_9_is_correct",
+        "args": [
+          "0000014576",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_7_where_9_is_correct",
+        "args": [
+          "0000014577",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_check_digit_8_where_9_is_correct",
+        "args": [
+          "0000014578",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "accepts_an_account_valid_for_two_codes",
+        "args": [
+          "0000014579",
+          "022"
+        ],
+        "returns": true,
+        "note": "a matching check digit does not identify the bank"
+      },
+      {
+        "name": "rejects_the_account_under_another_code",
+        "args": [
+          "0000014579",
+          "001"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_nine_digits",
+        "args": [
+          "000001457",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_eleven_digits",
+        "args": [
+          "00000145790",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_an_empty_account",
+        "args": [
+          "",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_an_account_with_an_inner_space",
+        "args": [
+          "00000 4579",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_an_account_with_a_leading_space",
+        "args": [
+          " 000014579",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_an_account_with_a_letter",
+        "args": [
+          "00000145a9",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_an_account_with_a_trailing_newline",
+        "args": [
+          "000001457\n",
+          "011"
+        ],
+        "returns": false,
+        "note": "ten characters, last is not a digit"
+      },
+      {
+        "name": "rejects_full_width_digits",
+        "args": [
+          "０００００１４５７９",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_a_two_digit_bank_code",
+        "args": [
+          "0000014579",
+          "11"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_an_empty_bank_code",
+        "args": [
+          "0000014579",
+          ""
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "validates_the_bank_code_before_the_account",
+        "args": [
+          "abc",
+          "11"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_numeric_account",
+        "args": [
+          14579,
+          "011"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_null_account",
+        "args": [
+          null,
+          "011"
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_a_numeric_bank_code",
+        "args": [
+          "0000014579",
+          11
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "accepts_the_cbn_ofi_worked_example",
+        "args": [
+          "0000214579",
+          "50547"
+        ],
+        "returns": true
+      },
+      {
+        "name": "rejects_the_ofi_example_with_digit_8",
+        "args": [
+          "0000214578",
+          "50547"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_an_ofi_account_under_a_bank_code",
+        "args": [
+          "0000214579",
+          "011"
+        ],
+        "returns": false
+      },
+      {
+        "name": "rejects_a_six_digit_code_in_is_valid_nuban",
+        "args": [
+          "0000214579",
+          "950547"
+        ],
+        "throws": "RangeError"
+      },
+      {
+        "name": "rejects_a_four_digit_code_in_is_valid_nuban",
+        "args": [
+          "0000214579",
+          "5054"
+        ],
+        "throws": "RangeError"
+      }
+    ],
+    "candidateBanks": [
+      {
+        "name": "includes_the_bank_the_cbn_example_belongs_to",
+        "args": [
+          "0000014579"
+        ],
+        "contains": [
+          "011"
+        ]
+      },
+      {
+        "name": "returns_an_empty_array_for_nine_digits",
+        "args": [
+          "000001457"
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_eleven_digits",
+        "args": [
+          "00000145790"
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_a_trailing_newline",
+        "args": [
+          "000001457\n"
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_letters",
+        "args": [
+          "abcdefghij"
+        ],
+        "returns": []
+      },
+      {
+        "name": "returns_an_empty_array_for_the_empty_string",
+        "args": [
+          ""
+        ],
+        "returns": []
+      },
+      {
+        "name": "rejects_a_number",
+        "args": [
+          1234567890
+        ],
+        "throws": "TypeError"
+      },
+      {
+        "name": "rejects_null",
+        "args": [
+          null
+        ],
+        "throws": "TypeError"
+      }
+    ]
+  },
+  "values": {}
+}

@@ -1,0 +1,159 @@
+{
+  "source": "NCC, Valid Assignment of Mobile Numbers with Dates of Allocation @ December 2023 (https://ncc.gov.ng/media/67/view), National Numbering Plan, October 2022 (https://ncc.gov.ng/sites/default/files/2024-11/Standards-National_Numbering_Plan_202210.pdf) and National Numbering Plan CSV (https://ncc.gov.ng/sites/default/files/2025-05/national_numbering_plan.csv). A prefix is listed when every document that lists it allocates the whole prefix to one operator and the newest two both list it; exclusions and the one naming decision (0804) are recorded in data/SOURCES.md.",
+  "retrievedAt": "2026-10-17",
+  "status": "verified",
+  "prefixes": [
+    {
+      "prefix": "0701",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0703",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0704",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0705",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0706",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0707",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0708",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0802",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0803",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0804",
+      "operator": "NATCOM (nTel)"
+    },
+    {
+      "prefix": "0805",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0806",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0807",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0808",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0809",
+      "operator": "EMTS (9Mobile)"
+    },
+    {
+      "prefix": "0810",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0811",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0812",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0813",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0814",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0815",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0816",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0817",
+      "operator": "EMTS (9Mobile)"
+    },
+    {
+      "prefix": "0818",
+      "operator": "EMTS (9Mobile)"
+    },
+    {
+      "prefix": "0901",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0902",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0903",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0904",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0905",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0906",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0907",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0908",
+      "operator": "EMTS (9Mobile)"
+    },
+    {
+      "prefix": "0909",
+      "operator": "EMTS (9Mobile)"
+    },
+    {
+      "prefix": "0911",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0912",
+      "operator": "AIRTEL"
+    },
+    {
+      "prefix": "0913",
+      "operator": "MTN"
+    },
+    {
+      "prefix": "0915",
+      "operator": "GLO"
+    },
+    {
+      "prefix": "0916",
+      "operator": "MTN"
+    }
+  ]
+}

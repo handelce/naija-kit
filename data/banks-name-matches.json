@@ -1,0 +1,732 @@
+{
+  "source": "CBN institution directories at https://www.cbn.gov.ng/supervision/ (public lists, names only)",
+  "retrievedAt": "2026-10-19",
+  "renamed": [
+    {
+      "code": "011",
+      "name": "First Bank of Nigeria",
+      "cbnName": "First Bank Nigeria Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "023",
+      "name": "Citibank Nigeria",
+      "cbnName": "Citibank Nigeria Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "032",
+      "name": "Union Bank of Nigeria",
+      "cbnName": "Union Bank of Nigeria Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "033",
+      "name": "United Bank For Africa",
+      "cbnName": "United Bank For Africa Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "035",
+      "name": "Wema Bank",
+      "cbnName": "Wema Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "044",
+      "name": "Access Bank",
+      "cbnName": "Access Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "050",
+      "name": "Ecobank Nigeria",
+      "cbnName": "Ecobank Nigeria Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "057",
+      "name": "Zenith Bank",
+      "cbnName": "Zenith Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "058",
+      "name": "Guaranty Trust Bank",
+      "cbnName": "Guaranty Trust Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "068",
+      "name": "Standard Chartered Bank",
+      "cbnName": "Standard Chartered Bank Nigeria Ltd.",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "070",
+      "name": "Fidelity Bank",
+      "cbnName": "Fidelity Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "076",
+      "name": "Polaris Bank",
+      "cbnName": "Polaris Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "082",
+      "name": "Keystone Bank",
+      "cbnName": "Keystone Bank Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "098",
+      "name": "Ekondo Microfinance Bank",
+      "cbnName": "EKONDO MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "100",
+      "name": "Suntrust Bank",
+      "cbnName": "SunTrust Bank Nigeria Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "104",
+      "name": "Parallex Bank",
+      "cbnName": "Parallex Bank Ltd",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "106",
+      "name": "Signature Bank Ltd",
+      "cbnName": "Signature Bank Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "107",
+      "name": "Optimus Bank Limited",
+      "cbnName": "Optimus Bank",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "108",
+      "name": "Alpha Morgan Bank",
+      "cbnName": "Alpha Morgan Bank Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "109",
+      "name": "Tatum Bank",
+      "cbnName": "Tatum Bank Limited",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "125",
+      "name": "Rubies MFB",
+      "cbnName": "RUBIES MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "214",
+      "name": "First City Monument Bank",
+      "cbnName": "First City Monument Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "215",
+      "name": "Unity Bank",
+      "cbnName": "Unity Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "221",
+      "name": "Stanbic IBTC Bank",
+      "cbnName": "Stanbic IBTC Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "232",
+      "name": "Sterling Bank",
+      "cbnName": "Sterling Bank Plc",
+      "cbnList": "Commercial Banks"
+    },
+    {
+      "code": "268",
+      "name": "Platinum Mortgage Bank",
+      "cbnName": "PLATINUM MORTGAGE BANK",
+      "cbnList": "Primary Mortgage Institutions"
+    },
+    {
+      "code": "301",
+      "name": "Jaiz Bank",
+      "cbnName": "JAIZ BANK PLC",
+      "cbnList": "Non-Interest Banks"
+    },
+    {
+      "code": "303",
+      "name": "Lotus Bank",
+      "cbnName": "LOTUS BANK LTD",
+      "cbnList": "Non-Interest Banks"
+    },
+    {
+      "code": "312",
+      "name": "Chikum Microfinance bank",
+      "cbnName": "CHIKUM MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "401",
+      "name": "ASO Savings and Loans",
+      "cbnName": "ASO SAVINGS & LOANS",
+      "cbnList": "Primary Mortgage Institutions"
+    },
+    {
+      "code": "40119",
+      "name": "Credit Direct Limited",
+      "cbnName": "CREDIT DIRECT LIMITED",
+      "cbnList": "Finance Companies"
+    },
+    {
+      "code": "402",
+      "name": "Jubilee Life Mortgage Bank",
+      "cbnName": "JUBILEE-LIFE MORTGAGE BANK",
+      "cbnList": "Primary Mortgage Institutions"
+    },
+    {
+      "code": "404",
+      "name": "Abbey Mortgage Bank",
+      "cbnName": "ABBEY MORTGAGE BANK",
+      "cbnList": "Primary Mortgage Institutions"
+    },
+    {
+      "code": "50036",
+      "name": "Ahmadu Bello University Microfinance Bank",
+      "cbnName": "Ahmadu Bello University Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50055",
+      "name": "Al-Barakah Microfinance Bank",
+      "cbnName": "Al-Barakah Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50083",
+      "name": "Aramoko MFB",
+      "cbnName": "Aramoko Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50092",
+      "name": "Assets Microfinance Bank",
+      "cbnName": "Assets Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "501",
+      "name": "FSDH Merchant Bank Limited",
+      "cbnName": "FSDH MERCHANT BANK",
+      "cbnList": "Merchant Banks"
+    },
+    {
+      "code": "50122",
+      "name": "Berachah Microfinance Bank Ltd.",
+      "cbnName": "Berachah Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50186",
+      "name": "Civic Microfinance Bank Limited",
+      "cbnName": "CIVIC MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "502",
+      "name": "Rand Merchant Bank",
+      "cbnName": "RAND MERCHANT BANK",
+      "cbnList": "Merchant Banks"
+    },
+    {
+      "code": "50204",
+      "name": "Corestep MFB",
+      "cbnName": "CORESTEP MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50216",
+      "name": "CRUTECH MICROFINANCE BANK LTD",
+      "cbnName": "CRUTECH MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50263",
+      "name": "Ekimogun MFB",
+      "cbnName": "EKIMOGUN MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50280",
+      "name": "ESO-E MICROFINANCE BANK LIMITED",
+      "cbnName": "ESO-E MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50304",
+      "name": "Mint MFB",
+      "cbnName": "Mint Microfinance Bank Limited",
+      "cbnList": "Non-Interest Banks"
+    },
+    {
+      "code": "50383",
+      "name": "Hasal Microfinance Bank",
+      "cbnName": "HASAL MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50439",
+      "name": "Ikoyi Osun MFB",
+      "cbnName": "IKOYI-OSUN MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50453",
+      "name": "Imowo MFB",
+      "cbnName": "IMOWO MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50457",
+      "name": "Infinity MFB",
+      "cbnName": "INFINITY MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50502",
+      "name": "Kadpoly MFB",
+      "cbnName": "KADPOLY MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50549",
+      "name": "Links MFB",
+      "cbnName": "LINKS MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50570",
+      "name": "Mega Microfinance Bank",
+      "cbnName": "MEGA MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50582",
+      "name": "Shield MFB",
+      "cbnName": "SHIELD MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50629",
+      "name": "NPF MICROFINANCE BANK",
+      "cbnName": "NPF MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50689",
+      "name": "Olabisi Onabanjo University Microfinance Bank",
+      "cbnName": "OLABISI ONABANJO UNIVERSITY MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50697",
+      "name": "OLUCHUKWU MICROFINANCE BANK LTD",
+      "cbnName": "OLUCHUKWU MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50725",
+      "name": "BOLD MFB",
+      "cbnName": "Bold Microfinance bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50743",
+      "name": "Peace Microfinance Bank",
+      "cbnName": "PEACE MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50756",
+      "name": "SPECTRUM MFB LTD",
+      "cbnName": "SPECTRUM MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50761",
+      "name": "REHOBOTH MICROFINANCE BANK",
+      "cbnName": "REHOBOTH MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50767",
+      "name": "ROCKSHIELD MICROFINANCE BANK",
+      "cbnName": "ROCKSHIELD MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50800",
+      "name": "Solid Rock MFB",
+      "cbnName": "SOLID ROCK MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50809",
+      "name": "STATESIDE MICROFINANCE BANK",
+      "cbnName": "STATESIDE MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50870",
+      "name": "Unaab Microfinance Bank Limited",
+      "cbnName": "UNAAB MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50871",
+      "name": "Unical MFB",
+      "cbnName": "UNICAL MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50875",
+      "name": "UNIMAID MICROFINANCE BANK",
+      "cbnName": "UNIMAID MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50880",
+      "name": "UNIUYO Microfinance Bank Ltd",
+      "cbnName": "UNIUYO MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50910",
+      "name": "Consumer Microfinance Bank",
+      "cbnName": "CONSUMER MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50926",
+      "name": "Amju Unique MFB",
+      "cbnName": "AMJU-Unique Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50931",
+      "name": "Bowen Microfinance Bank",
+      "cbnName": "BOWEN MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50934",
+      "name": "First Option MFB",
+      "cbnName": "FIRST OPTION MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "50994",
+      "name": "Rephidim Microfinance Bank",
+      "cbnName": "REPHIDIM MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51049",
+      "name": "RenMoney Microfinance Bank",
+      "cbnName": "RENMONEY MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51074",
+      "name": "Alert MFB",
+      "cbnName": "Alert Microfinance Bank",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51080",
+      "name": "Ultraviolet Microfinance Bank",
+      "cbnName": "Ultraviolet Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51085",
+      "name": "Victory MFB",
+      "cbnName": "VICTORY MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51097",
+      "name": "Umunnachi Microfinance Bank Ltd",
+      "cbnName": "UMUNNACHI MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51110",
+      "name": "FFS Microfinance Bank",
+      "cbnName": "FFS MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51113",
+      "name": "Safe Haven MFB",
+      "cbnName": "SAFE HAVEN MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51142",
+      "name": "Nigerian Navy Microfinance Bank Limited",
+      "cbnName": "NIGERIAN NAVY MFB LTD",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51146",
+      "name": "Personal Trust MFB",
+      "cbnName": "PERSONAL TRUST MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51204",
+      "name": "Above Only MFB",
+      "cbnName": "Above Only Microfinance Bank",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51241",
+      "name": "FCMB MFB",
+      "cbnName": "FCMB MFB LTD.",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51244",
+      "name": "Ibile Microfinance Bank",
+      "cbnName": "IBILE MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51267",
+      "name": "Benysta Microfinance Bank Limited",
+      "cbnName": "Benysta Microfinance Bank",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51276",
+      "name": "GROOMING MICROFINANCE BANK",
+      "cbnName": "GROOMING MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51286",
+      "name": "Rigo Microfinance Bank Limited",
+      "cbnName": "RIGO MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51293",
+      "name": "QuickFund MFB",
+      "cbnName": "QUICKFUND MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51297",
+      "name": "Crescent MFB",
+      "cbnName": "CRESCENT MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51310",
+      "name": "Sparkle Microfinance Bank",
+      "cbnName": "SPARKLE MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51312",
+      "name": "Abulesoro MFB",
+      "cbnName": "Abulesoro Microfinance Bank",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51314",
+      "name": "Firmus MFB",
+      "cbnName": "FIRMUS MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51316",
+      "name": "Unilag Microfinance Bank",
+      "cbnName": "UNILAG MFB LTD",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51318",
+      "name": "Fairmoney Microfinance Bank",
+      "cbnName": "FAIRMONEY MFB LTD",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51322",
+      "name": "Uhuru MFB",
+      "cbnName": "UHURU MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51334",
+      "name": "Davenport MICROFINANCE BANK",
+      "cbnName": "Davenport Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51355",
+      "name": "Waya Microfinance Bank",
+      "cbnName": "WAYA MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51368",
+      "name": "Dash Microfinance Bank",
+      "cbnName": "Dash Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51371",
+      "name": "Novus MFB",
+      "cbnName": "Novus Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51373",
+      "name": "Zitra MFB",
+      "cbnName": "Zitra Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51386",
+      "name": "Weston Charis MFB",
+      "cbnName": "Weston-Charis Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51411",
+      "name": "BLOC MFB",
+      "cbnName": "Bloc Microfinance bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51429",
+      "name": "Springfield Microfinance Bank",
+      "cbnName": "Springfield Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51437",
+      "name": "Cedrus MFB",
+      "cbnName": "Cedrus Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51449",
+      "name": "Boost Microfinance Bank",
+      "cbnName": "Boost Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51455",
+      "name": "5TT MFB",
+      "cbnName": "5TT Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51474",
+      "name": "Mayden Microfinance Bank",
+      "cbnName": "MAYDEN MICROFINANCE BANK",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "51477",
+      "name": "Pact Microfinance Bank",
+      "cbnName": "PACT MICROFINANCE BANK",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "559",
+      "name": "Coronation Merchant Bank",
+      "cbnName": "CORONATION MERCHANT BANK",
+      "cbnList": "Merchant Banks"
+    },
+    {
+      "code": "562",
+      "name": "Greenwich Merchant Bank",
+      "cbnName": "GREENWICH MERCHANT BANK",
+      "cbnList": "Merchant Banks"
+    },
+    {
+      "code": "566",
+      "name": "VFD Microfinance Bank Limited",
+      "cbnName": "VFD MFB LTD",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "594",
+      "name": "Yes MFB",
+      "cbnName": "YES MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "602",
+      "name": "Accion Microfinance Bank",
+      "cbnName": "Accion Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "650",
+      "name": "Bosak Microfinance Bank",
+      "cbnName": "BOSAK MFB",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "90003",
+      "name": "Mayfresh Mortgage Bank",
+      "cbnName": "MAYFRESH MORTGAGE BANK",
+      "cbnList": "Primary Mortgage Institutions"
+    },
+    {
+      "code": "90065",
+      "name": "Haggai Mortgage Bank",
+      "cbnName": "HAGGAI MORTGAGE BANK",
+      "cbnList": "Primary Mortgage Institutions"
+    },
+    {
+      "code": "90287",
+      "name": "ASSET MATRIX MFB",
+      "cbnName": "Asset Matrix Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "90641",
+      "name": "SOURCE MFB",
+      "cbnName": "SOURCE MICROFINANCE BANK LIMITED",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "90774",
+      "name": "BWAY MFB",
+      "cbnName": "BWAY Microfinance bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    },
+    {
+      "code": "90787",
+      "name": "VISTA MFB",
+      "cbnName": "Vista Microfinance Bank Limited",
+      "cbnList": "Micro-Finance Banks"
+    }
+  ]
+}
