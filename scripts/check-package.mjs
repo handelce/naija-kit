@@ -1,8 +1,9 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = join(import.meta.dirname, "..", "packages", "js");
+const root = join(dirname(fileURLToPath(import.meta.url)), "..", "packages", "js");
 const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
 const problems = [];
 
