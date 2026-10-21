@@ -1,6 +1,6 @@
 {
   "name": "naija-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nigerian developer utilities: NUBAN and bank codes, phone numbers, states, Naira formatting. Zero dependencies.",
   "license": "MIT",
   "author": "Handel Emezue (https://github.com/handelce)",
@@ -13,7 +13,17 @@
   "bugs": {
     "url": "https://github.com/handelce/naija-kit/issues"
   },
-  "keywords": ["nigeria", "nuban", "naira", "phone", "banks", "states", "validation"],
+  "keywords": [
+    "nigeria",
+    "nigerian",
+    "naija",
+    "nuban",
+    "naira",
+    "phone",
+    "banks",
+    "states",
+    "validation"
+  ],
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.cjs",

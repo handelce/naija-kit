@@ -1,13 +1,28 @@
 # naija-kit
 
-The Nigerian data and rules your app keeps rewriting: bank account numbers,
-phone numbers, states, and Naira. Zero dependencies, typed, tree-shakeable.
+Helpers for Nigerian bank account numbers, phone numbers, states and Naira
+amounts, written in TypeScript with no dependencies. It covers the rules most
+Nigerian apps end up rewriting:
+
+- Account numbers: check that a 10-digit NUBAN is well formed for a bank or
+  other financial institution, using the CBN's check-digit rule, and list the
+  banks a number could belong to.
+- Banks: look up institution codes and names (a provisional list, see below).
+- Phone numbers: turn `0803 123 4567`, `+234 803 123 4567` and `2348031234567`
+  into one form, format them, and find the operator a prefix was originally
+  allocated to.
+- States: the 36 states and the FCT, with capitals, ISO codes and geopolitical
+  zones.
+- Naira: format, parse and spell out amounts, held as integer kobo and never as
+  floating point.
 
 ```sh
 npm install naija-kit
 ```
 
-Import only the module you use. A phone-only import does not include the bank
+It includes its own TypeScript types and works from ESM or CommonJS on Node 18
+or later. Each module is imported on its own (`naija-kit/phone`,
+`naija-kit/nuban` and so on), and a phone-only import does not include the bank
 list.
 
 ## Validation is not verification
